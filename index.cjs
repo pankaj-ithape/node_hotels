@@ -6,7 +6,7 @@ const Person=require('./modal/person.cjs')
 const MenuRoutes=require('./routes/MenuRoutes.cjs')
 const bodyparser=require('body-parser')
 const PersonRoutes=require('./routes/PersonRoutes.cjs')
-
+require('dotenv').config();
 const app=express()
 app.use(bodyparser.json())
 app.use('/person',PersonRoutes)
@@ -32,4 +32,5 @@ app.get('/person',async (req,res)=>{
       console.log("Dissuceesfully")
     }
 })
-app.listen(5656)
+const PORT=process.env.PORT
+app.listen(PORT)
