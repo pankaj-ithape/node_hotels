@@ -42,6 +42,7 @@ router.put('/:id',async (req,res)=>{
         res.status(500).json("dissuccesfully added")
     }
 })
+// hii
 router.delete('/:id',async (req,res)=>{
     try{
         const MenuId=req.params.id
